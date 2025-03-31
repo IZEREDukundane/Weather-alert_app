@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Setup script for weather alert app
+
+echo "Setting up the project..."
+
+# Create virtual environment (for Python backend)
+python3 -m venv venv
+source venv/bin/activate
+
+# Install backend dependencies
+pip install -r backend/requirements.txt
+
+echo "Backend dependencies installed."
+
+# Install frontend dependencies
+cd frontend
+yarn install  # Use npm install if you prefer
+cd ..
+
+echo "Frontend dependencies installed."
+
+echo "Setup complete! You can now run the app."
+
